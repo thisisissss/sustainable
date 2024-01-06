@@ -7,7 +7,7 @@ export default function Component() {
       <header className="flex items-center justify-between px-4 md:px-6 h-14">
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6 text-green-500" />
-          <span className="sr-only">Company Name</span>
+          <span className="sr-only">Sustainable Green Gold</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
@@ -18,20 +18,25 @@ export default function Component() {
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
+            href="#our-products"
           >
             Products
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
+            href="/startup"
+          >
+            TroutTech
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#about-us"
           >
             About Us
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
+          href="/contact">
             Contact
           </Link>
         </nav>
@@ -62,7 +67,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 mx-auto flex justify-center items-center">
+        <section id="our-products" className="w-full py-12 md:py-24 lg:py-32 mx-auto flex justify-center items-center">
           <div className="container space-y-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -137,7 +142,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 mx-auto flex justify-center items-center bg-gray-100">
+        <section id="about-us" className="w-full py-12 md:py-24 lg:py-32 mx-auto flex justify-center items-center bg-gray-100">
           <div className="container space-y-12 px-4 md:px-6 text-center">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
