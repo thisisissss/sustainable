@@ -1,116 +1,123 @@
-import React from "react";
-import { useRouter } from "next/router"; // Import useRouter from next/router
+import Link from "next/link";
+import Image from "next/image";
 
-interface CardProps {
-  imageUrl: string;
-  description: string;
-}
-
-const CheeseComponent: React.FC = () => {
-  const router = useRouter(); // Get the router object
-
-  // Function to handle the back navigation
-  const handleBackClick = () => {
-    router.push("/");
-  };
-
+export default function Component() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
-      <div className="container mx-auto p-4">
-        <button
-          onClick={handleBackClick}
-          className="text-blue-600 hover:text-blue-700 transition duration-300 ease-in-out"
-          aria-label="Back to home"
-        >
-          &#8592; Back
-        </button>
-        <h1 className="text-4xl font-semibold text-center my-12">
-          Unpasteurized Cheese
-        </h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card Components Here */}
-          <Card
-            imageUrl="https://i.imgur.com/Opr5HW2.png"
-            description="Chevre in ashes"
-          />
-          <Card
-            imageUrl="https://i.imgur.com/ak7uKJB.png"
-            description="Classic Creamy Chevre"
-          />
-          <Card
-            imageUrl="https://i.imgur.com/6ZAEXyg.png"
-            description="Raw Goat Cheese - Brie"
-          />
-          <Card
-            imageUrl="https://i.imgur.com/yqNzunT.png"
-            description="Chevre in Black"
-          />
+    <section className="w-full py-12 bg-white">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <h1 className="text-4xl font-bold tracking-tight">
+            Artisanal Cheese
+          </h1>
+          <p className="max-w-2xl text-gray-500 dark:text-gray-400">
+            Our cheese is made from raw unpasteurized milk without the addition
+            of artificial citric acid, calcium chloride, or artificial rennet,
+            which can cause intestinal problems. Explore our four unique
+            varieties.
+          </p>
         </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <div className="relative group">
+            <Link className="absolute inset-0 z-10" href="#">
+              <span className="sr-only">View</span>
+            </Link>
 
-        {/* Additional Content */}
-        <div className="text-center mt-16">
-          <h2 className="text-2xl font-semibold">
-            Discover the Art of Natural Cheesemaking
-          </h2>
-          <p className="mt-4 mb-4">
-            Welcome to our world of artisanal cheese, where every batch tells a
-            story of purity and care. At the heart of our cheesemaking
-            philosophy lies a deep respect for the natural properties of milk.
-            We believe in preserving its integrity, ensuring that every cheese
-            we produce is a testament to quality and natural goodness.
-          </p>
-          <h2 className="text-2xl font-semibold">
-            Gentle Handling of Milk: The Foundation of Our Cheese
-          </h2>
-          <p className="mt-4 mb-4">
-            Our journey begins with the gentle handling of milk, a crucial
-            ingredient that defines the soul of our cheese. We maintain a strict
-            temperature control, never heating the milk above 32°C. This
-            delicate approach preserves the milk natural enzymes and beneficial
-            bacteria, which are essential for developing the rich, complex
-            flavors in our cheese. By keeping the milk raw, we allow its true
-            character to shine through, resulting in cheeses that are not just
-            food, but an experience.
-          </p>
-          <h2 className="text-2xl font-semibold">
-            Commitment to Natural Ingredients
-          </h2>
-          <p className="mt-4 mb-4">
-            In our pursuit of creating the finest cheeses, we steer clear of any
-            harmful chemicals. You will not find artificial citric acid, calcium
-            chloride, or rennets laced with a full spectrum of chemicals in our
-            cheeses. We believe that great cheese is made from simple, natural
-            ingredients, and this belief is reflected in every slice.
-          </p>
-          <h2 className="text-2xl font-semibold">
-            Raw, Pure, and Full of Flavor
-          </h2>
-          <p className="mt-4 mb-4">
-            Our cheeses are more than just a treat for the palate; they are a
-            promise of purity. By keeping our cheeses raw, we ensure that they
-            retain the full-bodied, authentic flavors that only nature can
-            provide. Each cheese is a celebration of the natural, unadulterated
-            taste of dairy, crafted with care and passion.
-          </p>
-          <p className="mt-4 mb-4">
-            Join us on a journey of taste, tradition, and natural goodness.
-            Experience the difference with our artisanal cheeses, where every
-            bite tells a story of quality, purity, and a gentle touch.
-          </p>
+            <Image
+              className="rounded-lg object-cover w-full aspect-square group-hover:opacity-50 transition-opacity"
+              src="https://i.imgur.com/Opr5HW2.png"
+              alt="Description"
+              width={200}
+              height={200}
+              layout="responsive"
+            />
+
+            <div className="flex-1 py-4">
+              <h3 className="font-semibold tracking-tight">Chevre in ashes</h3>
+              <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
+                Aged for 12 months, our Cheddar has a rich, nutty flavor with a
+                smooth, firm texture.
+              </p>
+            </div>
+          </div>
+          <div className="relative group">
+            <Link className="absolute inset-0 z-10" href="#">
+              <span className="sr-only">View</span>
+            </Link>
+            <Image
+              className="rounded-lg object-cover w-full aspect-square group-hover:opacity-50 transition-opacity"
+              src="https://i.imgur.com/ak7uKJB.png"
+              alt="Description"
+              width={200}
+              height={200}
+              layout="responsive"
+            />
+            <div className="flex-1 py-4">
+              <h3 className="font-semibold tracking-tight">
+                Classic Creamy Chevre
+              </h3>
+              <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
+                Our Gouda is a mild, yellow cheese with a slightly sweet, nutty
+                flavor that grows more complex with age.
+              </p>
+            </div>
+          </div>
+          <div className="relative group">
+            <Link className="absolute inset-0 z-10" href="#">
+              <span className="sr-only">View</span>
+            </Link>
+            <Image
+              className="rounded-lg object-cover w-full aspect-square group-hover:opacity-50 transition-opacity"
+              src="https://i.imgur.com/6ZAEXyg.png"
+              alt="Description"
+              width={200}
+              height={200}
+              layout="responsive"
+            />
+            <div className="flex-1 py-4">
+              <h3 className="font-semibold tracking-tight">
+                Raw Goat Cheese - Brie
+              </h3>
+              <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
+                Brie is a soft cheese with a creamy, buttery flavor and a
+                smooth, velvety texture.
+              </p>
+            </div>
+          </div>
+          <div className="relative group">
+            <Link className="absolute inset-0 z-10" href="#">
+              <span className="sr-only">View</span>
+            </Link>
+            <Image
+              className="rounded-lg object-cover w-full aspect-square group-hover:opacity-50 transition-opacity"
+              src="https://i.imgur.com/yqNzunT.png"
+              alt="Description"
+              width={200}
+              height={200}
+              layout="responsive"
+            />
+            <div className="flex-1 py-4">
+              <h3 className="font-semibold tracking-tight">Chevre in Black</h3>
+              <p className="text-sm leading-none text-gray-500 dark:text-gray-400">
+                Camembert is a soft, creamy cheese with a bloomy rind, usually
+                made from cow&apos;s milk.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="mt-8 text-center">
+        <h2 className="text-xl font-semibold">Try Our Cheese</h2>
+        <p className="mt-2 text-gray-500 dark:text-gray-400">
+          This is currently a demo version. If you&apos;re interested in trying
+          out our delicious cheese, you can make a request for samples.
+        </p>
+        <Link
+          href="#"
+          className="mt-4 px-12 inline-block bg-primary-500 text-black py-2 rounded-md shadow-lg hover:bg-primary-700 transition"
+        >
+          Request Cheese
+        </Link>
+      </div>
+    </section>
   );
-};
-
-const Card: React.FC<CardProps> = ({ imageUrl, description }) => (
-  <div className="rounded-lg overflow-hidden shadow-lg bg-white">
-    <img src={imageUrl} alt="Cheese" className="w-full h-64 object-cover" />
-    <div className="p-4">
-      <p className="text-gray-700 text-sm">{description}</p>
-    </div>
-  </div>
-);
-
-export default CheeseComponent;
+}

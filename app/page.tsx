@@ -83,8 +83,11 @@ export default function Component() {
                 </p>
               </div>
             </div>
+
             <div className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-              <div className="grid gap-1">
+            
+            <Link href="/cheese" passHref>
+                <div className="grid gap-1">
                 <h3 className="text-lg font-bold">Cheese</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Our cheese is made from the finest milk, sourced from local
@@ -98,6 +101,7 @@ export default function Component() {
                   width="200"
                 />
               </div>
+              </Link>
               <div className="grid gap-1">
                 <h3 className="text-lg font-bold">Soap</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
