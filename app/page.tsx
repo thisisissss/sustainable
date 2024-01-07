@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Component() {
   return (
-    <section key="1" className="w-full bg-white py-12 md:py-24 lg:py-32">
+    <section key="1" className="w-full bg-white py-2 md:py-2 lg:py-8">
       <header className="flex items-center justify-between px-4 md:px-6 h-14">
         <Link className="flex items-center justify-center" href="#">
           <MountainIcon className="h-6 w-6 text-green-500" />
@@ -102,6 +102,7 @@ export default function Component() {
                 />
               </div>
               </Link>
+              <Link href="/soap" passHref>
               <div className="grid gap-1">
                 <h3 className="text-lg font-bold">Soap</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -116,6 +117,8 @@ export default function Component() {
                   width="200"
                 />
               </div>
+              </Link>
+              <Link href="/pesticide" passHref>
               <div className="grid gap-1">
                 <h3 className="text-lg font-bold">Organic Pesticides</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -130,6 +133,8 @@ export default function Component() {
                   width="200"
                 />
               </div>
+              </Link>
+              <Link href="/starter" passHref>
               <div className="grid gap-1">
                 <h3 className="text-lg font-bold">Aquaponic Starters</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -143,6 +148,7 @@ export default function Component() {
                   width="200"
                 />
               </div>
+              </Link>
             </div>
           </div>
         </section>
