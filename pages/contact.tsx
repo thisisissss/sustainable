@@ -25,28 +25,43 @@ export default function Contact() {
   };
 
   return (
+    
     <>
-      <div
-        style={{
-          backgroundColor: "white",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Link href="/">
-          <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/logo-gg.svg"
-            alt="sgg logo"
-            width={200}
-            height={27}
-            priority
-          />
-        </Link>
-      </div>
-
-      {/* Contact Section */}
       <section className="bg-white dark:bg-gray-900">
+      <header className="flex items-center justify-between px-4 md:px-6 h-14">
+      
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/#our-products"
+          >
+            Products
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            TroutTech
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/#about-us"
+          >
+            About Us
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+          href="/contact">
+            Contact
+          </Link>
+        </nav>
+      </header>
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
             Contact Us

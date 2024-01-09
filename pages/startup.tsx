@@ -2,6 +2,7 @@ import { HTMLAttributes } from "react";
 import { SVGProps } from "react";
 import dynamic from "next/dynamic";
 import React from "react";
+import Link from "next/link";
 
 // Import ResponsiveBar dynamically and disable SSR
 const ResponsiveBar = dynamic(
@@ -15,6 +16,43 @@ export default function Component() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
       <section className="w-full px-4 text-center">
+      <header className="flex items-center justify-between px-4 md:px-6 h-14">
+        <Link className="flex items-center justify-center" href="#">
+          <MountainIcon className="h-6 w-6 text-green-500" />
+          <span className="sr-only">Sustainable Green Gold</span>
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/#our-products"
+          >
+            Products
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="#"
+          >
+            TroutTech
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+            href="/#about-us"
+          >
+            About Us
+          </Link>
+          <Link
+            className="text-sm font-medium hover:underline underline-offset-4"
+          href="/contact">
+            Contact
+          </Link>
+        </nav>
+      </header>
         <img
           alt="Northern region of Thailand"
           className="aspect-[2/1] object-cover w-full rounded-lg overflow-hidden mb-4"
@@ -283,6 +321,26 @@ function ScalingIcon(props: SVGProps<SVGSVGElement>) {
       <path d="M12 3H3v18h18v-9" />
       <path d="M16 3h5v5" />
       <path d="M14 15H9v-5" />
+    </svg>
+  );
+}
+
+
+function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }
